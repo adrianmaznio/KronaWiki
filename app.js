@@ -1,0 +1,138 @@
+const bodyParser = require('body-parser');
+const express = require('express');
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var urlencodedParser = bodyParser.urlencoded({
+    extended: false
+});
+const path = require("path");
+var async = require('async');
+const errorHandler = require('errorhandler');
+
+// Set up mongoose connection
+const mongoose = require('mongoose');
+let dev_db_url = 'mongodb://amaznio:adrian134@ds029811.mlab.com:29811/amazniowiki';
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+var objectID = mongoose.Types.ObjectId();
+
+
+//Items
+// const weapon = require('./routes/weapon.routes'); // Imports routes for the products
+const weapon_controller = require('./controllers/weapon.controller');
+
+
+//Configure mongoose's promise to global promise
+mongoose.promise = global.Promise;
+
+const app = express();
+
+//App configuration
+app.use(cookieParser());
+app.use(session({
+    secret: 'secret123',
+    saveUninitialized: true,
+    resave: true
+}));
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/controllers'));
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/routes'));
+
+app.set('view engine', 'ejs')
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+//Routes
+// app.use('/item', item);
+
+//Routes
+app.get('/', function(req, res) {
+    res.render('home');
+});
+app.get('/character/items/weapons', function(req, res) {
+    db.collection('weapons').find().toArray((err, result) => {
+        if (err) return console.log(err)
+        res.render('weapons', {
+            weapons: result
+        })
+    })
+});
+app.get('/character/items/armor', function(req, res) {
+    res.render('armor');
+});
+// app.get('/dashboard/items', function(req, res) {
+//     res.render('manageitems');
+// });
+app.post('/dashboard/items/weapons/create', urlencodedParser, weapon_controller.weapon_create);
+app.post('/dashboard/items/weapons/update', urlencodedParser, weapon_controller.weapon_update);
+app.post('/dashboard/items/weapons/delete', urlencodedParser, weapon_controller.weapon_delete);
+
+// app.get('/dashboard/items', function(req, res) {
+//             var locals = {};
+//             var tasks = [
+//                 // Load Weapons
+//                 function(callback) {
+//                     db.collection('weapons').find({}).toArray(function(err, weapons) {
+//                         if (err) return callback(err);
+//                         locals.weapons = weapons;
+//                         callback();
+//                     });
+//                     // },
+//                     // // Load news
+//                     // function(callback) {
+//                     //     db.collection('newsposts').find({}).toArray(function(err, posts) {
+//                     //         if (err) return callback(err);
+//                     //         locals.newsposts = posts;
+//                     //         callback();
+//                     //     });
+//                     // }
+//                 ];
+//
+//                 async.parallel(tasks, function(err) { //This function gets called after the two tasks have called their "task callbacks"
+//                     if (err) return next(err); //If an error occurred, let express handle it by calling the `next` function
+//                     // Here `locals` will be an object with `products` and `newsposts` keys
+//                     // Example: `locals = {products: [...], newsposts: [...]}`
+//                     res.render('manageitems', locals);
+//                 });
+//             });
+//
+app.get('/dashboard/items', function(req, res) {
+    db.collection('weapons').find().toArray((err, result) => {
+        if (err) return console.log(err)
+        res.render('manageitems', {
+            weapons: result
+        })
+    })
+});
+//
+// app.post('/dashboardproducts/create', urlencodedParser, product_controller.product_create);
+// app.post('/dashboardproducts/update', urlencodedParser, product_controller.product_update);
+// app.post('/dashboardproducts/delete', urlencodedParser, product_controller.product_delete);
+//
+// app.get('/dashboardnewsposts', function(req, res) {
+//     db.collection('newsposts').find().toArray((err, result) => {
+//         if (err) return console.log(err)
+//         console.log('Rendering dashboard_newsposts.ejs');
+//         res.render('dashboard_newsposts', {
+//             newsposts: result
+//         })
+//     })
+// });
+//
+// app.post('/dashboardnewsposts/create', urlencodedParser, newspost_controller.newspost_create);
+// app.post('/dashboardnewsposts/update', urlencodedParser, newspost_controller.newspost_update);
+// app.post('/dashboardnewsposts/delete', urlencodedParser, newspost_controller.newspost_delete);
+
+
+
+//
+app.listen(process.env.PORT || 4000, () => {
+    console.log('Wiki is up and running!');
+});

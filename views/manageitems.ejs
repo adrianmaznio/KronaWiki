@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Adrian Maznio">
+	<title>Adrian · Wiki</title>
+
+	<!-- Bootstrap core CSS -->
+	<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+
+	<!-- Custom styles for this template -->
+	<link href="../../dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Adrian · Wiki</a>
+		<!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="#">Sign in</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+
+
+			<!-- Start of Navigation Side Bar -->
+			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+				<div class="sidebar-sticky">
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Character</span>
+					</h6>
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="/character/items/weapons">
+								<i class="fas fa-shield-alt"></i>
+								Weapons
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/character/items/armor">
+								<i class="fas fa-shield-alt"></i>
+								Armor
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/character/items/fashion">
+								<i class="fas fa-tshirt"></i>
+								Fashion
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/character/items/Jewelry">
+								<i class=" fas fa-ring"></i>
+								Jewelry
+							</a>
+						</li>
+					</ul>
+
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Dashboard</span>
+					</h6>
+					<!-- <a class="d-flex align-items-center text-muted" href="#">
+						<span data-feather="plus-circle"></span>
+					</a> -->
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item">
+							<a class="nav-link active" href="/dashboard/items">
+								<i class="fas fa-wrench"></i>
+								Manage Items
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="fas fa-wrench"></i>
+								Add something else
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- End of Navigation Side Bar -->
+
+
+
+			<!-- Start of main section -->
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2">Weapons</h1>
+				</div><!-- End Main Title-->
+				<div class="row pt-3 pb-2 mb-3">
+
+					<div class="col-sm-3">
+						<div class="card card-body bg-light">
+							<div class="card-body">
+								<h5 class="card-title">Create Weapon:</h5>
+								<form action="/dashboard/items/weapons/create" method="POST">
+									<div class="form-group">
+										<label for="class">Weapon Class</label>
+										<select class="form-control" name="class" id="class">
+											<option value="Knight">Knight</option>
+											<option value="Blade">Blade</option>
+											<option value="Billposter">Billposter</option>
+											<option value="Ringmaster">Ringmaster</option>
+											<option value="Ranger">Ranger</option>
+											<option value="Jester">Jester</option>
+											<option value="Elementer">Elementor</option>
+											<option value="Psykeeper">Psykeeper</option>
+											<option value="Raider">Raider</option>
+											<option value="Legionair">Legionair</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="name">Weapon Name</label>
+										<input type="text" class="form-control" name="name">
+									</div>
+									<div class="form-group">
+										<label for="type">Weapon Type</label>
+										<select class="form-control" name="type" id="type">
+											<option value="One-Handed Axe">One-Handed Axe</option>
+											<option value="Two-Handed Axe">Two-Handed Axe</option>
+											<option value="One-Handed Sword">One-Handed Sword</option>
+											<option value="Two-Handed Sword">Two-Handed Sword</option>
+											<option value="Knuckle">Knuckle</option>
+											<option value="Stick">Stick</option>
+											<option value="Bow">Bow</option>
+											<option value="Yo-Yo">Yo-Yo</option>
+											<option value="Staff">Staff</option>
+											<option value="Wand">Wand</option>
+											<option value="Gun">Gun</option>
+											<option value="Cannon">Cannon</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="level">Weapon Level</label>
+										<input type="text" class="form-control" name="level">
+									</div>
+									<div class="form-group">
+										<label for="attackMin">Weapon Min. Attack</label>
+										<input type="text" class="form-control" name="attackMin">
+									</div>
+									<div class="form-group">
+										<label for="attackMax">Weapon Max. Attack</label>
+										<input type="text" class="form-control" name="attackMax">
+									</div>
+									<div class="form-group">
+										<label for="bonus">Weapon Bonus</label>
+										<input type="text" class="form-control" name="bonus">
+									</div>
+									<button type="submit" class="btn btn-primary">Create</button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="card card-body bg-light">
+							<table class="table">
+								<thead class="thead-dark">
+									<tr>
+										<th scope="col">Icon</th>
+										<th scope="col">Name</th>
+										<th scope="col">Type</th>
+										<th scope="col">Level</th>
+										<th scope="col">Attack</th>
+										<th scope="col">Bonus</th>
+										<th scope="col">Options</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% for(var i=0; i < weapons.length; i++) {%>
+									<tr>
+										<td>
+											<!--<img src="../../img/bloodyaxe.gif" class="image-fluid">-->
+										</td>
+										<td>
+											<%= weapons[i].name %>
+										</td>
+										<td>
+											<%= weapons[i].type %>
+										</td>
+										<td>
+											<%= weapons[i].level %>
+										</td>
+										<td>
+											<%= weapons[i].attackMin %> ~
+											<%= weapons[i].attackMax %>
+										</td>
+										<td>
+											<%= weapons[i].bonus %>
+										</td>
+										<td>
+											<button id="weapon-update" class="btn btn-warning" data-placement="bottom" data-toggle="popover" data-title="Update Weapon" data-container="body" type="button" data-html="true" href="#" id="login"><span data-feather="edit"></span></button>
+											<div id="popover-weapon-update" class="d-none">
+												<form action="/dashboard/items/weapons/update" method="POST">
+													<div class="form-group">
+														<label for="class">Weapon Class</label>
+														<select class="form-control" name="class" id="class">
+															<option value="Knight">Knight</option>
+															<option value="Blade">Blade</option>
+															<option value="Billposter">Billposter</option>
+															<option value="Ringmaster">Ringmaster</option>
+															<option value="Ranger">Ranger</option>
+															<option value="Jester">Jester</option>
+															<option value="Elementer">Elementor</option>
+															<option value="Psykeeper">Psykeeper</option>
+															<option value="Raider">Raider</option>
+															<option value="Legionair">Legionair</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="name">Weapon Name</label>
+														<input type="text" class="form-control" name="name" value="<%= weapons[i].name %>">
+													</div>
+													<div class="form-group">
+														<label for="type">Weapon Type</label>
+														<select class="form-control" name="type" id="type">
+															<option value="One-Handed Axe">One-Handed Axe</option>
+															<option value="Two-Handed Axe">Two-Handed Axe</option>
+															<option value="One-Handed Sword">One-Handed Sword</option>
+															<option value="Two-Handed Sword">Two-Handed Sword</option>
+															<option value="Knuckle">Knuckle</option>
+															<option value="Stick">Stick</option>
+															<option value="Bow">Bow</option>
+															<option value="Yo-Yo">Yo-Yo</option>
+															<option value="Staff">Staff</option>
+															<option value="Wand">Wand</option>
+															<option value="Gun">Gun</option>
+															<option value="Cannon">Cannon</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="level">Weapon Level</label>
+														<input type="text" class="form-control" name="level" value="<%= weapons[i].level %>">
+													</div>
+													<div class="form-group">
+														<label for="attackMin">Weapon Min. Attack</label>
+														<input type="text" class="form-control" name="attackMin" value="<%= weapons[i].attackMin %>">
+													</div>
+													<div class="form-group">
+														<label for="attackMax">Weapon Max. Attack</label>
+														<input type="text" class="form-control" name="attackMax" value="<%= weapons[i].attackMax %>">
+													</div>
+													<div class="form-group">
+														<label for="bonus">Weapon Bonus</label>
+														<input type="text" class="form-control" name="bonus" value="<%= weapons[i].bonus %>">
+													</div>
+													<div class="form-group d-none">
+														<label for="id">Weapon ID:</label>
+														<input type="text" class="form-control" name="id" value="<%= weapons[i]._id.toString() %>">
+													</div>
+													<button type="submit" class="btn btn-primary">Update</button>
+												</form>
+											</div>
+											<button id="weapon-delete" class="btn btn-danger" data-placement="bottom" data-toggle="popover" data-title="Are you sure you want to delete this weapon?" data-container="body" type="button" data-html="true" href="#" id="login"><span
+												    data-feather="trash-2"></span></button>
+											<div id="popover-weapon-delete" class="d-none">
+												<form action="/dashboard/items/weapons/delete" method="POST">
+													<div class="form-group d-none">
+														<label for="id">Weapon ID:</label>
+														<input type="text" class="form-control" name="id" value="<%= weapons[i]._id.toString() %>">
+													</div>
+													<button type="submit" class="btn btn-danger">Yes</button>
+												</form>
+											</div>
+										</td>
+									</tr>
+									<% } %>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div><!-- End Row -->
+			</main><!-- End of main section -->
+
+
+
+
+
+		</div> <!-- End of Row -->
+	</div> <!-- End of Container -->
+
+
+	<script>
+		feather.replace();
+
+		$('#weapon-update').popover({
+			html: true,
+			content: function() {
+				return $('#popover-weapon-update').html();
+			}
+		});
+		$('#weapon-delete').popover({
+			html: true,
+			content: function() {
+				return $('#popover-weapon-delete').html();
+			}
+		});
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script>
+		window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')
+	</script>
+	<script src="/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+	<script src="dashboard.js"></script>
+</body>
+
+</html>
