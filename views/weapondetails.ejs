@@ -16,15 +16,14 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-	<script src="../../script.js"></script>
-	<script src="../../dashboard.js"></script>
+	<script src="../../../../dashboard.js"></script>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
 	<!-- Custom styles for this template -->
-	<link href="../../dashboard.css" rel="stylesheet">
+	<link href="../../../../dashboard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -103,114 +102,29 @@
 			<!-- Start of main section -->
 			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">Weapons</h1>
+					<h2 class="h2">
+						<%= weapon.name %> · Details</h2>
 				</div><!-- End Main Title-->
 				<div class="row pt-3 pb-2 mb-3">
 
 					<div class="col-sm-3">
-						<div class="card card-body bg-light">
+						<div class="card card-body bg-light justify-content-center">
 							<div class="card-body">
-								<h5 class="card-title">Weapons list:</h5>
-								<form>
-									<div class="form-group">
-										<label for="class">Select Weapon By Class</label>
-										<select class="form-control" id="selectClass">
-											<option value="All">All</option>
-											<option value="Knight">Knight</option>
-											<option value="Blade">Blade</option>
-											<option value="Billposter">Billposter</option>
-											<option value="Ringmaster">Ringmaster</option>
-											<option value="Ranger">Ranger</option>
-											<option value="Jester">Jester</option>
-											<option value="Elementer">Elementor</option>
-											<option value="Psykeeper">Psykeeper</option>
-											<option value="Raider">Raider</option>
-											<option value="Legionair">Legionair</option>
-										</select>
-									</div>
-								</form>
+
 							</div>
 
-							<div class="card-body">
-								<form>
-									<div class="form-group">
-										<label for="class">Select Weapon By Type</label>
-										<select class="form-control" id="selectType">
-											<option value="All"> All </option>
-											<option value="One-Handed Axe">One-Handed Axe</option>
-											<option value="Two-Handed Axe">Two-Handed Axe</option>
-											<option value="One-Handed Sword">One-Handed Sword</option>
-											<option value="Two-Handed Sword">Two-Handed Sword</option>
-											<option value="Knuckle">Knuckle</option>
-											<option value="Stick">Stick</option>
-											<option value="Bow">Bow</option>
-											<option value="Yo-Yo">Yo-Yo</option>
-											<option value="Staff">Staff</option>
-											<option value="Wand">Wand</option>
-											<option value="Gun">Gun</option>
-											<option value="Cannon">Cannon</option>
-										</select>
-									</div>
-								</form>
-							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="col-sm-8">
-						<div class="card card-body bg-light">
-							<table id="weaponsTable" class="table">
-								<thead class="thead-dark">
-									<tr>
-										<th scope="col">Name</th>
-										<th scope="col">Class</th>
-										<th scope="col">Type</th>
-										<th scope="col">Level</th>
-										<th scope="col">Attack</th>
-										<th scope="col">Bonus</th>
-										<th scope="col">Details</th>
-										<th scope="col" class="d-none">All</th>
-									</tr>
-								</thead>
-								<tbody>
-									<% for(var i=0; i < weapons.length; i++) { %>
-									<tr>
-										<td>
-											<%= weapons[i].name %>
-										</td>
-										<td>
-											<%= weapons[i].class %>
-										</td>
-										<td>
-											<%= weapons[i].type %>
-										</td>
-										<td>
-											<%= weapons[i].level %>
-										</td>
-										<td>
-											<%= weapons[i].attackMin %> ~
-											<%= weapons[i].attackMax %>
-										</td>
-										<td>
-											<%= weapons[i].bonus %>
-										</td>
-										<td>
-											<a class="btn btn-primary" href="/character/items/weapons/<%= weapons[i]._id.toString() %>/details" role="button"><span data-feather="external-link"></span></a>
-										</td>
-										<td class="d-none">All</td>
-									</tr>
-									<% } %>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div><!-- End Row -->
-			</main><!-- End of main section -->
+		</div><!-- End Row -->
+		</main><!-- End of main section -->
 
 
 
 
 
-		</div> <!-- End of Row -->
+	</div> <!-- End of Row -->
 	</div> <!-- End of Container -->
 
 

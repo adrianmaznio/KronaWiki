@@ -66,7 +66,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/character/items/Jewelry">
+							<a class="nav-link" href="/character/items/jewelry">
 								<i class=" fas fa-ring"></i>
 								Jewelry
 							</a>
@@ -174,7 +174,6 @@
 							<table class="table">
 								<thead class="thead-dark">
 									<tr>
-										<th scope="col">Icon</th>
 										<th scope="col">Name</th>
 										<th scope="col">Type</th>
 										<th scope="col">Level</th>
@@ -186,9 +185,6 @@
 								<tbody>
 									<% for(var i=0; i < weapons.length; i++) {%>
 									<tr>
-										<td>
-											<!--<img src="../../img/bloodyaxe.gif" class="image-fluid">-->
-										</td>
 										<td>
 											<%= weapons[i].name %>
 										</td>
@@ -206,7 +202,7 @@
 											<%= weapons[i].bonus %>
 										</td>
 										<td>
-											<button id="weapon-update" class="btn btn-warning" data-placement="bottom" data-toggle="popover" data-title="Update Weapon" data-container="body" type="button" data-html="true" href="#" id="login"><span data-feather="edit"></span></button>
+											<button id="weapon-update" class="btn btn-warning" data-placement="bottom" data-toggle="popover" data-title="Update Weapon" data-container="body" type="button" data-html="true" href="#"><span data-feather="edit"></span></button>
 											<div id="popover-weapon-update" class="d-none">
 												<form action="/dashboard/items/weapons/update" method="POST">
 													<div class="form-group">

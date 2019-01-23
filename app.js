@@ -64,9 +64,22 @@ app.get('/character/items/weapons', function(req, res) {
         })
     })
 });
+
+app.get('/character/items/weapons/:weaponID/details', function(req, res) {
+    db.collection('weapons').find({
+        _id: req.params.weaponID
+    }, (err, result) => {
+        if (err) return console.log(err)
+        res.render('weapondetails', {
+            weapon: result
+        })
+    })
+});
+
 app.get('/character/items/armor', function(req, res) {
     res.render('armor');
 });
+
 // app.get('/dashboard/items', function(req, res) {
 //     res.render('manageitems');
 // });
