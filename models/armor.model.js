@@ -1,12 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let WeaponSchema = new Schema({
+let ArmorSchema = new Schema({
     class: {
         type: String,
             required: true
     },
     name: {
+        type: String,
+        required: true
+    },
+    sex: {
         type: String,
         required: true
     },
@@ -18,16 +22,12 @@ let WeaponSchema = new Schema({
         type: Number,
         required: true
     },
-    attackMin: {
+    defenseMin: {
         type: Number,
         required: true
     },
-    attackMax: {
+    defenseMax: {
         type: Number,
-        required: true
-    },
-    bonus: {
-        type: String,
         required: true
     },
     rarity: {
@@ -38,7 +38,11 @@ let WeaponSchema = new Schema({
         type: String,
         required: true
     },
+    set: {
+        type: String,
+        required: true
+    },
 });
 
 // Export the model
-module.exports = mongoose.model('Weapon', WeaponSchema);
+module.exports = mongoose.model('Armor', ArmorSchema);

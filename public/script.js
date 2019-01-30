@@ -22,4 +22,15 @@ $(document).ready(function($) {
             });
         }
     });
+
+    $('#selectSet').change(function() {
+        var selection = $(this).val();
+        $('table')[selection ? 'show' : 'hide']();
+
+        if (selection) {
+            $.each($('#armorTable tbody tr'), function(index, item) {
+                $(item)[$(item).is(':contains(' + selection + ')') ? 'show' : 'hide']();
+            });
+        }
+    });
 });

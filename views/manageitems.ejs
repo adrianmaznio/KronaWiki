@@ -104,72 +104,84 @@
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2">Weapons</h1>
 				</div><!-- End Main Title-->
-				<div class="row pt-3 pb-2 mb-3">
-
-					<div class="col-sm-3">
-						<div class="card card-body bg-light">
-							<div class="card-body">
-								<h5 class="card-title">Create Weapon:</h5>
-								<form action="/dashboard/items/weapons/create" method="POST">
-									<div class="form-group">
-										<label for="class">Weapon Class</label>
-										<select class="form-control" name="class" id="class">
-											<option value="Knight">Knight</option>
-											<option value="Blade">Blade</option>
-											<option value="Billposter">Billposter</option>
-											<option value="Ringmaster">Ringmaster</option>
-											<option value="Ranger">Ranger</option>
-											<option value="Jester">Jester</option>
-											<option value="Elementer">Elementor</option>
-											<option value="Psykeeper">Psykeeper</option>
-											<option value="Raider">Raider</option>
-											<option value="Legionair">Legionair</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="name">Weapon Name</label>
-										<input type="text" class="form-control" name="name">
-									</div>
-									<div class="form-group">
-										<label for="type">Weapon Type</label>
-										<select class="form-control" name="type" id="type">
-											<option value="One-Handed Axe">One-Handed Axe</option>
-											<option value="Two-Handed Axe">Two-Handed Axe</option>
-											<option value="One-Handed Sword">One-Handed Sword</option>
-											<option value="Two-Handed Sword">Two-Handed Sword</option>
-											<option value="Knuckle">Knuckle</option>
-											<option value="Stick">Stick</option>
-											<option value="Bow">Bow</option>
-											<option value="Yo-Yo">Yo-Yo</option>
-											<option value="Staff">Staff</option>
-											<option value="Wand">Wand</option>
-											<option value="Gun">Gun</option>
-											<option value="Cannon">Cannon</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="level">Weapon Level</label>
-										<input type="text" class="form-control" name="level">
-									</div>
-									<div class="form-group">
-										<label for="attackMin">Weapon Min. Attack</label>
-										<input type="text" class="form-control" name="attackMin">
-									</div>
-									<div class="form-group">
-										<label for="attackMax">Weapon Max. Attack</label>
-										<input type="text" class="form-control" name="attackMax">
-									</div>
-									<div class="form-group">
-										<label for="bonus">Weapon Bonus</label>
-										<input type="text" class="form-control" name="bonus">
-									</div>
-									<button type="submit" class="btn btn-primary">Create</button>
-								</form>
+				<div class="row pl-3 pt-3 pb-2 mb-3">
+					<button id="weapon-create" class="weapon-create btn btn-primary" data-placement="right" data-toggle="popover" data-title="Create Weapon" data-container="body" type="button" data-html="true" href="#">Create Weapon <span data-feather="plus-circle"></span></button>
+					<div id="popover-weapon-create" class="popover-weapon-create d-none">
+						<h5 class="card-title">Create Weapon:</h5>
+						<form action="/dashboard/items/weapons/create" method="POST">
+							<div class="form-group">
+								<label for="class">Weapon Class</label>
+								<select class="form-control" name="class" id="class">
+									<option value="Knight">Knight</option>
+									<option value="Blade">Blade</option>
+									<option value="Billposter">Billposter</option>
+									<option value="Ringmaster">Ringmaster</option>
+									<option value="Ranger">Ranger</option>
+									<option value="Jester">Jester</option>
+									<option value="Elementer">Elementor</option>
+									<option value="Psykeeper">Psykeeper</option>
+									<option value="Raider">Raider</option>
+									<option value="Legionair">Legionair</option>
+								</select>
 							</div>
-
-						</div>
+							<div class="form-group">
+								<label for="name">Weapon Name</label>
+								<input type="text" class="form-control" name="name">
+							</div>
+							<div class="form-group">
+								<label for="class">Weapon Rarity</label>
+								<select class="form-control" name="rarity" id="rarity">
+									<option value="General">General</option>
+									<option value="Ultimate">Ultimate</option>
+									<option value="Everpower">Everpower</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="type">Weapon Type</label>
+								<select class="form-control" name="type" id="type">
+									<option value="One-Handed Axe">One-Handed Axe</option>
+									<option value="Two-Handed Axe">Two-Handed Axe</option>
+									<option value="One-Handed Sword">One-Handed Sword</option>
+									<option value="Two-Handed Sword">Two-Handed Sword</option>
+									<option value="Knuckle">Knuckle</option>
+									<option value="Stick">Stick</option>
+									<option value="Bow">Bow</option>
+									<option value="Yo-Yo">Yo-Yo</option>
+									<option value="Staff">Staff</option>
+									<option value="Wand">Wand</option>
+									<option value="Gun">Gun</option>
+									<option value="Cannon">Cannon</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="level">Weapon Level</label>
+								<input type="text" class="form-control" name="level">
+							</div>
+							<div class="form-group">
+								<label for="attackMin">Weapon Min. Attack</label>
+								<input type="text" class="form-control" name="attackMin">
+							</div>
+							<div class="form-group">
+								<label for="attackMax">Weapon Max. Attack</label>
+								<input type="text" class="form-control" name="attackMax">
+							</div>
+							<div class="form-group">
+								<label for="bonus">Weapon Bonus</label>
+								<input type="text" class="form-control" name="bonus">
+							</div>
+							<div class="form-group">
+								<label for="bonus">Weapon Location</label>
+								<input type="text" class="form-control" name="location">
+							</div>
+							<button type="submit" class="btn btn-primary">Create</button>
+						</form>
 					</div>
-					<div class="col-sm-8">
+					<!-- End Weapon Creation-->
+				</div>
+
+
+				<div class="row pt-3 pb-2 mb-3">
+					<div class="col-lg-10">
 						<div class="card card-body bg-light">
 							<table class="table">
 								<thead class="thead-dark">
@@ -202,8 +214,8 @@
 											<%= weapons[i].bonus %>
 										</td>
 										<td>
-											<button id="weapon-update" class="btn btn-warning" data-placement="bottom" data-toggle="popover" data-title="Update Weapon" data-container="body" type="button" data-html="true" href="#"><span data-feather="edit"></span></button>
-											<div id="popover-weapon-update" class="d-none">
+											<button id="weapon-update" class="weapon-update btn btn-warning" data-placement="left" data-toggle="popover" data-title="Update Weapon" data-container="body" type="button" data-html="true" href="#"><span data-feather="edit"></span></button>
+											<div id="popover-weapon-update" class="popover-weapon-update d-none">
 												<form action="/dashboard/items/weapons/update" method="POST">
 													<div class="form-group">
 														<label for="class">Weapon Class</label>
@@ -223,6 +235,14 @@
 													<div class="form-group">
 														<label for="name">Weapon Name</label>
 														<input type="text" class="form-control" name="name" value="<%= weapons[i].name %>">
+													</div>
+													<div class="form-group">
+														<label for="class">Weapon Rarity</label>
+														<select class="form-control" name="rarity" id="rarity">
+															<option value="General">General</option>
+															<option value="Ultimate">Ultimate</option>
+															<option value="Everpower">Everpower</option>
+														</select>
 													</div>
 													<div class="form-group">
 														<label for="type">Weapon Type</label>
@@ -257,6 +277,10 @@
 														<label for="bonus">Weapon Bonus</label>
 														<input type="text" class="form-control" name="bonus" value="<%= weapons[i].bonus %>">
 													</div>
+													<div class="form-group">
+														<label for="bonus">Weapon Location</label>
+														<input type="text" class="form-control" name="location" value="<%= weapons[i].location %>">
+													</div>
 													<div class="form-group d-none">
 														<label for="id">Weapon ID:</label>
 														<input type="text" class="form-control" name="id" value="<%= weapons[i]._id.toString() %>">
@@ -264,9 +288,9 @@
 													<button type="submit" class="btn btn-primary">Update</button>
 												</form>
 											</div>
-											<button id="weapon-delete" class="btn btn-danger" data-placement="bottom" data-toggle="popover" data-title="Are you sure you want to delete this weapon?" data-container="body" type="button" data-html="true" href="#" id="login"><span
+											<button id="weapon-delete" class="weapon-delete btn btn-danger" data-placement="bottom" data-toggle="popover" data-title="Are you sure you want to delete this weapon?" data-container="body" type="button" data-html="true" href="#" id="login"><span
 												    data-feather="trash-2"></span></button>
-											<div id="popover-weapon-delete" class="d-none">
+											<div id="popover-weapon-delete" class="popover-weapon-delete d-none">
 												<form action="/dashboard/items/weapons/delete" method="POST">
 													<div class="form-group d-none">
 														<label for="id">Weapon ID:</label>
@@ -283,6 +307,214 @@
 						</div>
 					</div>
 				</div><!-- End Row -->
+
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2">Armor</h1>
+				</div><!-- End Main Title-->
+				<div class="row pl-3 pt-3 pb-2 mb-3">
+					<!-- Start Armor Creation-->
+					<button id="armor-create" class="armor-create btn btn-primary" data-placement="right" data-toggle="popover" data-title="Create Armor" data-container="body" type="button" data-html="true" href="#">Create Armor<span data-feather="plus-circle"></span></button>
+					<div id="popover-armor-create" class="popover-armor-create d-none">
+						<h5 class="card-title">Create Armor:</h5>
+						<form action="/dashboard/items/armor/create" method="POST">
+							<div class="form-group">
+								<label for="class">Armor Class</label>
+								<select class="form-control" name="class" id="class">
+									<option value="Knight">Knight</option>
+									<option value="Blade">Blade</option>
+									<option value="Billposter">Billposter</option>
+									<option value="Ringmaster">Ringmaster</option>
+									<option value="Ranger">Ranger</option>
+									<option value="Jester">Jester</option>
+									<option value="Elementer">Elementor</option>
+									<option value="Psykeeper">Psykeeper</option>
+									<option value="Raider">Raider</option>
+									<option value="Legionair">Legionair</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="name">Armor Name</label>
+								<input type="text" class="form-control" name="name">
+							</div>
+							<div class="form-group">
+								<label for="bonus">Armor Set</label>
+								<input type="text" class="form-control" name="set">
+							</div>
+							<div class="form-group">
+								<label for="name">Armor Sex</label>
+								<select class="form-control" name="sex" id="sex">
+									<option value="General">Male</option>
+									<option value="Ultimate">Female</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="class">Armor Rarity</label>
+								<select class="form-control" name="rarity" id="rarity">
+									<option value="General">General</option>
+									<option value="Ultimate">Ultimate</option>
+									<option value="Everpower">Everpower</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="type">Armor Type</label>
+								<select class="form-control" name="type" id="type">
+									<option value="Helmet">Helmet</option>
+									<option value="Suit">Suit</option>
+									<option value="Gauntlets">Gauntlets</option>
+									<option value="Boots">Boots</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="level">Armor Level</label>
+								<input type="text" class="form-control" name="level">
+							</div>
+							<div class="form-group">
+								<label for="attackMin">Armor Min. Defense</label>
+								<input type="text" class="form-control" name="defenseMin">
+							</div>
+							<div class="form-group">
+								<label for="attackMax">Armor Max. Defense</label>
+								<input type="text" class="form-control" name="defenseMax">
+							</div>
+							<div class="form-group">
+								<label for="bonus">Armor Location</label>
+								<input type="text" class="form-control" name="location">
+							</div>
+							<button type="submit" class="btn btn-primary">Create</button>
+						</form>
+					</div>
+					<!-- End Armor Creation-->
+				</div>
+				<div class="row pt-3 pb-2 mb-3">
+					<div class="col-lg-10">
+						<div class="card card-body bg-light">
+							<table class="table">
+								<thead class="thead-dark">
+									<tr>
+										<th scope="col">Name</th>
+										<th scope="col">Rarity</th>
+										<th scope="col">Sex</th>
+										<th scope="col">Type</th>
+										<th scope="col">Level</th>
+										<th scope="col">Defense</th>
+										<th scope="col">Options</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% for(var i=0; i < armor.length; i++) {%>
+									<tr>
+										<td>
+											<%= armor[i].name %>
+										</td>
+										<td>
+											<%= armor[i].rarity %>
+										</td>
+										<td>
+											<%= armor[i].sex %>
+										</td>
+										<td>
+											<%= armor[i].type %>
+										</td>
+										<td>
+											<%= armor[i].level %>
+										</td>
+										<td>
+											<%= armor[i].defenseMin %> ~
+											<%= armor[i].defenseMax %>
+										</td>
+										<td>
+											<button id="armor-update" class="armor-update btn btn-warning" data-placement="left" data-toggle="popover" data-title="Update Armor" data-container="body" type="button" data-html="true" href="#"><span data-feather="edit"></span></button>
+											<div id="popover-armor-update" class="popover-armor-update d-none">
+												<form action="/dashboard/items/armor/update" method="POST">
+													<div class="form-group">
+														<label for="class">Armor Class</label>
+														<select class="form-control" name="class" id="class">
+															<option value="Knight">Knight</option>
+															<option value="Blade">Blade</option>
+															<option value="Billposter">Billposter</option>
+															<option value="Ringmaster">Ringmaster</option>
+															<option value="Ranger">Ranger</option>
+															<option value="Jester">Jester</option>
+															<option value="Elementer">Elementor</option>
+															<option value="Psykeeper">Psykeeper</option>
+															<option value="Raider">Raider</option>
+															<option value="Legionair">Legionair</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="name">Armor Name</label>
+														<input type="text" class="form-control" name="name" value="<%= armor[i].name %>">
+													</div>
+													<div class="form-group">
+														<label for="bonus">Armor Set</label>
+														<input type="text" class="form-control" name="bonus" value="<%= armor[i].set %>">
+													</div>
+													<div class="form-group">
+														<label for="name">Armor Sex</label>
+														<select class="form-control" name="sex" id="sex">
+															<option value="General">Male</option>
+															<option value="Ultimate">Female</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="class">Armor Rarity</label>
+														<select class="form-control" name="rarity" id="rarity">
+															<option value="General">General</option>
+															<option value="Ultimate">Ultimate</option>
+															<option value="Everpower">Everpower</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="type">Armor Type</label>
+														<select class="form-control" name="type" id="type">
+															<option value="Helmet">Helmet</option>
+															<option value="Suit">Suit</option>
+															<option value="Gauntlets">Gauntlets</option>
+															<option value="Boots">Boots</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label for="level">Armor Level</label>
+														<input type="text" class="form-control" name="level" value="<%= armor[i].level %>">
+													</div>
+													<div class="form-group">
+														<label for="attackMin">Armor Min. Defense</label>
+														<input type="text" class="form-control" name="defenseMin" value="<%= armor[i].defenseMin %>">
+													</div>
+													<div class="form-group">
+														<label for="attackMax">Armor Max. Defense</label>
+														<input type="text" class="form-control" name="defenseMax" value="<%= armor[i].defenseMax %>">
+													</div>
+													<div class="form-group">
+														<label for="bonus">Armor Location</label>
+														<input type="text" class="form-control" name="location" value="<%= armor[i].location %>">
+													</div>
+													<div class="form-group d-none">
+														<label for="id">Armor ID:</label>
+														<input type="text" class="form-control" name="id" value="<%= armor[i]._id.toString() %>">
+													</div>
+													<button type="submit" class="btn btn-primary">Update</button>
+												</form>
+											</div>
+											<button id="armor-delete" class="armor-delete btn btn-danger" data-placement="bottom" data-toggle="popover" data-title="Are you sure you want to delete this armor?" data-container="body" type="button" data-html="true" href="#" id="login"><span
+												    data-feather="trash-2"></span></button>
+											<div id="popover-armor-delete" class="popover-armor-delete d-none">
+												<form action="/dashboard/items/armor/delete" method="POST">
+													<div class="form-group d-none">
+														<label for="id">Armor ID:</label>
+														<input type="text" class="form-control" name="id" value="<%= armor[i]._id.toString() %>">
+													</div>
+													<button type="submit" class="btn btn-danger">Yes</button>
+												</form>
+											</div>
+										</td>
+									</tr>
+									<% } %>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div><!-- End Armor Table Row -->
 			</main><!-- End of main section -->
 
 
@@ -295,17 +527,41 @@
 
 	<script>
 		feather.replace();
-
-		$('#weapon-update').popover({
+		$('.weapon-create').popover({
 			html: true,
 			content: function() {
-				return $('#popover-weapon-update').html();
+				return $(this).siblings('.popover-weapon-create').html();
 			}
 		});
-		$('#weapon-delete').popover({
+		$('.weapon-update').popover({
 			html: true,
 			content: function() {
-				return $('#popover-weapon-delete').html();
+				return $(this).siblings('.popover-weapon-update').html();
+			}
+		});
+		$('.weapon-delete').popover({
+			html: true,
+			content: function() {
+				return $(this).siblings('.popover-weapon-delete').html();
+			}
+		});
+
+		$('.armor-create').popover({
+			html: true,
+			content: function() {
+				return $(this).siblings('.popover-armor-create').html();
+			}
+		});
+		$('.armor-update').popover({
+			html: true,
+			content: function() {
+				return $(this).siblings('.popover-armor-update').html();
+			}
+		});
+		$('.armor-delete').popover({
+			html: true,
+			content: function() {
+				return $(this).siblings('.popover-armor-delete').html();
 			}
 		});
 	</script>

@@ -13,7 +13,9 @@ exports.weapon_create = function(req, res, next) {
         level: req.body.level,
         attackMin: req.body.attackMin,
         attackMax: req.body.attackMax,
-        bonus: req.body.bonus
+        bonus: req.body.bonus,
+        rarity: req.body.rarity,
+        location: req.body.location
     });
     weapon.save(function(err) {
         if (err) {
@@ -26,11 +28,12 @@ exports.weapon_create = function(req, res, next) {
 };
 
 exports.weapon_details = function(req, res, next) {
-    // res.render('product_details');
-    // Product.findById(req.params.id, function(err, product) {
-    //     if (err) return next(err);
-    //     res.send('Name: ' + product.name + '\nPrice: ' + product.price);
-    // })
+    Weapon.findById(req.params.weaponID, (err, result) => {
+        if (err) return console.log(err)
+        res.render('weapondetails', {
+            weapon: result
+        })
+    })
 };
 
 exports.weapon_update = function(req, res, next) {
@@ -42,7 +45,9 @@ exports.weapon_update = function(req, res, next) {
             level: req.body.level,
             attackMin: req.body.attackMin,
             attackMax: req.body.attackMax,
-            bonus: req.body.bonus
+            bonus: req.body.bonus,
+            rarity: req.body.rarity,
+            location: req.body.location
         }
     }, function(err, product) {
         if (err) return next(err);
