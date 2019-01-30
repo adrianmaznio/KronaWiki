@@ -19,87 +19,21 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Adrian · Wiki</a>
-		<!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
-		<ul class="navbar-nav px-3">
-			<li class="nav-item text-nowrap">
-				<a class="nav-link" href="#">Sign in</a>
-			</li>
-		</ul>
-	</nav>
+	<% include navbar_partial %>
 
 	<div class="container-fluid">
 		<div class="row">
 
-
-			<!-- Start of Navigation Side Bar -->
-			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-				<div class="sidebar-sticky">
-					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-						<span>Character</span>
-					</h6>
-					<ul class="nav flex-column">
-						<li class="nav-item">
-							<a class="nav-link" href="/character/items/weapons">
-								<i class="fas fa-shield-alt"></i>
-								Weapons
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/character/items/armor">
-								<i class="fas fa-shield-alt"></i>
-								Armor
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/character/items/fashion">
-								<i class="fas fa-tshirt"></i>
-								Fashion
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/character/items/jewelry">
-								<i class=" fas fa-ring"></i>
-								Jewelry
-							</a>
-						</li>
-					</ul>
-
-					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-						<span>Dashboard</span>
-					</h6>
-					<!-- <a class="d-flex align-items-center text-muted" href="#">
-						<span data-feather="plus-circle"></span>
-					</a> -->
-					<ul class="nav flex-column mb-2">
-						<li class="nav-item">
-							<a class="nav-link" href="/dashboard/items">
-								<i class="fas fa-wrench"></i>
-								Manage Items
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								<i class="fas fa-wrench"></i>
-								Add something else
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-			<!-- End of Navigation Side Bar -->
-
-
+			<% include sidebar_partial %>
 
 			<!-- Start of main section -->
-			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+			<main role="main" class="col-md-9 ml-sm-auto col-md-10 px-4">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2">Welcome to Adrian · Wiki!</h1>
 				</div><!-- End Main Title-->
 				<div class="row pt-3 pb-2 mb-3">
 
-					<div class="col-sm-3">
+					<div class="col-xl-3">
 						<div class="card card-body bg-light">
 							<div class="card-body">
 								<h2 class="card-title">Welcome!</h2>

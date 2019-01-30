@@ -56,6 +56,9 @@ app.use(bodyParser.urlencoded({
 app.get('/', function(req, res) {
     res.render('home');
 });
+app.get('/home', function(req, res) {
+    res.render('home');
+});
 app.get('/character/items/weapons', function(req, res) {
     db.collection('weapons').find().toArray((err, result) => {
         if (err) return console.log(err)

@@ -28,146 +28,47 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">Adrian · Wiki</a>
-		<ul class="navbar-nav px-3">
-			<li class="nav-item text-nowrap">
-				<a class="nav-link" href="#">Sign in</a>
-			</li>
-		</ul>
-	</nav>
+	<% include navbar_partial %>
 
 	<div class="container-fluid">
 		<div class="row">
-
-
-			<!-- Start of Navigation Side Bar -->
-			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-				<div class="sidebar-sticky">
-					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-						<span>Character</span>
-					</h6>
-					<ul class="nav flex-column">
-						<li class="nav-item">
-							<a class="nav-link" href="/character/items/weapons">
-								<i class="fas fa-shield-alt"></i>
-								Weapons
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="/character/items/armor">
-								<i class="fas fa-shield-alt"></i>
-								Armor
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/character/items/fashion">
-								<i class="fas fa-tshirt"></i>
-								Fashion
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/character/items/jewelry">
-								<i class=" fas fa-ring"></i>
-								Jewelry
-							</a>
-						</li>
-					</ul>
-
-					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-						<span>Dashboard</span>
-					</h6>
-					<!-- <a class="d-flex align-items-center text-muted" href="#">
-						<span data-feather="plus-circle"></span>
-					</a> -->
-					<ul class="nav flex-column mb-2">
-						<li class="nav-item">
-							<a class="nav-link" href="/dashboard/items">
-								<i class="fas fa-wrench"></i>
-								Manage Items
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								<i class="fas fa-wrench"></i>
-								Add something else
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-			<!-- End of Navigation Side Bar -->
-
-
-
+			<% include sidebar_partial %>
 			<!-- Start of main section -->
-			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+			<main role="main" class="col-md-9 ml-sm-auto col-md-10 px-4">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2">Armor</h1>
 				</div><!-- End Main Title-->
-				<div class="row pt-3 pb-2 mb-3">
 
-					<div class="col-sm-3">
+				<div class="row pt-3 pb-2 mb-3">
+					<div class="col-sm-3 d-none d-sm-block" style="min-width: 370px;">
 						<div class="card card-body bg-light">
 							<div class="card-body">
 								<h5 class="card-title">Armor list:</h5>
 								<form>
 									<div class="form-group">
-										<label for="class">Select Armor By Class</label>
-										<select class="form-control" id="selectClass">
-											<option value="All">All</option>
-											<option value="Knight">Knight</option>
-											<option value="Blade">Blade</option>
-											<option value="Billposter">Billposter</option>
-											<option value="Ringmaster">Ringmaster</option>
-											<option value="Ranger">Ranger</option>
-											<option value="Jester">Jester</option>
-											<option value="Elementer">Elementor</option>
-											<option value="Psykeeper">Psykeeper</option>
-											<option value="Raider">Raider</option>
-											<option value="Legionair">Legionair</option>
-										</select>
-									</div>
-								</form>
-							</div>
-
-							<div class="card-body">
-								<form>
-									<div class="form-group">
-										<label for="class">Select Armor By Type</label>
-										<select class="form-control" id="selectType">
-											<option value="Helmet">Helmet</option>
-											<option value="Suit">Suit</option>
-											<option value="Gauntlets">Gauntlets</option>
-											<option value="Boots">Boots</option>
-										</select>
-									</div>
-								</form>
-							</div>
-
-							<div class="card-body">
-								<form>
-									<div class="form-group">
-										<label for="set">Select Armor By Set</label>
-										<input type="text" class="form-control" id="selectSet" name="set">
+										<label for="set">Search Armor By Name</label>
+										<input type="text" class="form-control" onkeyup="myFunction()" id="searchName">
 									</div>
 								</form>
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="col-sm-8">
+
+				<div class="row pt-3 pb-2 mb-3">
+					<div class="col-xl-8">
 						<div class="card card-body bg-light">
 							<table id="armorTable" class="table">
 								<thead class="thead-dark">
 									<tr>
 										<th scope="col">Name</th>
-										<th scope="col">Rarity</th>
-										<th scope="col">Sex</th>
+										<th scope="col" class="d-none d-sm-table-cell">Rarity</th>
+										<th scope="col" class="d-none d-sm-table-cell">Sex</th>
 										<th scope="col">Class</th>
-										<th scope="col">Type</th>
+										<th scope="col" class="d-none d-md-table-cell">Type</th>
 										<th scope="col">Level</th>
-										<th scope="col">Defense</th>
+										<th scope="col" class="d-none d-sm-table-cell">Defense</th>
 										<th scope="col">Details</th>
 										<th scope="col" class="d-none">Set</th>
 										<th scope="col" class="d-none">All</th>
@@ -179,22 +80,22 @@
 										<td>
 											<%= armor[i].name %>
 										</td>
-										<td>
+										<td class="d-none d-sm-table-cell">
 											<%= armor[i].rarity %>
 										</td>
-										<td>
+										<td class="d-none d-sm-table-cell">
 											<%= armor[i].sex %>
 										</td>
 										<td>
 											<%= armor[i].class %>
 										</td>
-										<td>
+										<td class="d-none d-md-table-cell">
 											<%= armor[i].type %>
 										</td>
 										<td>
 											<%= armor[i].level %>
 										</td>
-										<td>
+										<td class="d-none d-sm-table-cell">
 											<%= armor[i].defenseMin %> ~
 											<%= armor[i].defenseMax %>
 										</td>
@@ -224,6 +125,28 @@
 
 	<script>
 		feather.replace();
+
+		function myFunction() {
+			// Declare variables
+			var input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById("searchName");
+			filter = input.value.toUpperCase();
+			table = document.getElementById("armorTable");
+			tr = table.getElementsByTagName("tr");
+
+			// Loop through all table rows, and hide those who don't match the search query
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+					txtValue = td.textContent || td.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+					} else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		}
 	</script>
 
 </body>
