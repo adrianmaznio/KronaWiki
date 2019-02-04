@@ -10,7 +10,6 @@ exports.newspost_create = function(req, res, next) {
         title: req.body.title,
         author: req.body.author,
         date: req.body.date,
-        author: req.body.author,
         hidden: req.body.hidden,
         body: req.body.body
     });

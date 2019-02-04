@@ -38,6 +38,7 @@
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2">Weapons</h1>
 				</div><!-- End Main Title-->
+				<%- messages('messages', locals) %>
 				<div class="row pl-3 pt-3 pb-2 mb-3">
 					<button id="weapon-create" class="weapon-create btn btn-primary" data-placement="right" data-toggle="popover" data-title="Create Weapon" data-container="body" type="button" data-html="true" href="#">Create Weapon <span data-feather="plus-circle"></span></button>
 					<div id="popover-weapon-create" class="popover-weapon-create d-none">
@@ -449,6 +450,30 @@
 						</div>
 					</div>
 				</div><!-- End Armor Table Row -->
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2">Consumables</h1>
+				</div><!-- End Main Title-->
+				<div class="row pl-3 pt-3 pb-2 mb-3">
+					<button id="consumable-create" class="consumable-create btn btn-primary" data-placement="right" data-toggle="popover" data-title="Create Weapon" data-container="body" type="button" data-html="true" href="#">Create Consumable <span data-feather="plus-circle"></span></button>
+					<div id="popover-consumable-create" class="popover-consumable-create d-none">
+						<h5 class="card-title">Create Consumable:</h5>
+						<form action="/dashboard/items/consumables/create" method="POST">
+							<div class="form-group">
+								<label for="name">Consumable Name</label>
+								<input type="text" class="form-control" name="name">
+							</div>
+							<div class="form-group">
+								<label for="class">Consumable Level</label>
+								<input type="text" class="form-control" name="level">
+							</div>
+							<div class="form-group">
+								<label for="type">Consumable Effect</label>
+								<input type="text" class="form-control" name="effect">
+							</div>
+							<button type="submit" class="btn btn-primary">Create</button>
+						</form>
+					</div>
+				</div>
 			</main><!-- End of main section -->
 
 
@@ -496,6 +521,13 @@
 			html: true,
 			content: function() {
 				return $(this).siblings('.popover-armor-delete').html();
+			}
+		});
+
+		$('.consumable-create').popover({
+			html: true,
+			content: function() {
+				return $(this).siblings('.popover-consumable-create').html();
 			}
 		});
 	</script>

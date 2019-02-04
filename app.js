@@ -1,6 +1,8 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 var session = require('express-session');
+const expressValidator = require('express-validator');
+const flash = require('connect-flash');
 var cookieParser = require('cookie-parser');
 var urlencodedParser = bodyParser.urlencoded({
     extended: false
@@ -24,6 +26,10 @@ var objectID = mongoose.Types.ObjectId();
 // const weapon = require('./routes/weapon.routes'); // Imports routes for the products
 const weapon_controller = require('./controllers/weapon.controller');
 const armor_controller = require('./controllers/armor.controller');
+const consumable_controller = require('./controllers/consumable.controller');
+//Other
+const guide_controller = require('./controllers/guide.controller');
+const newspost_controller = require('./controllers/newspost.controller');
 
 //Configure mongoose's promise to global promise
 mongoose.promise = global.Promise;
@@ -37,6 +43,31 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }));
+
+//express messages middleware
+app.use(require('connect-flash')());
+app.use(function(req, res, next) {
+    res.locals.messages = require('express-messages')(req, res);
+    next();
+});
+// express validator
+app.use(expressValidator({
+    errorFormatter: function(param, msg, value) {
+        var namespace = param.split('.'),
+            root = namspace.shift(),
+            formParam = root;
+
+        while (namespace.length) {
+            formParam += '[' + namspace.shift() + ']';
+        }
+        return {
+            param: formParam,
+            msg: msg,
+            value: value
+        };
+    }
+}));
+
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/controllers'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -113,20 +144,7 @@ app.get('/dashboard/items', function(req, res) {
         res.render('manageitems', locals);
     });
 });
-//
-// app.get('/dashboard/items', function(req, res) {
-//     db.collection('weapons').find().toArray((err, result) => {
-//         if (err) return console.log(err)
-//         res.render('manageitems', {
-//             weapons: result
-//         })
-//     })
-// });
-//
-// app.post('/dashboardproducts/create', urlencodedParser, product_controller.product_create);
-// app.post('/dashboardproducts/update', urlencodedParser, product_controller.product_update);
-// app.post('/dashboardproducts/delete', urlencodedParser, product_controller.product_delete);
-//
+
 // app.get('/dashboardnewsposts', function(req, res) {
 //     db.collection('newsposts').find().toArray((err, result) => {
 //         if (err) return console.log(err)
@@ -141,6 +159,18 @@ app.get('/dashboard/items', function(req, res) {
 // app.post('/dashboardnewsposts/update', urlencodedParser, newspost_controller.newspost_update);
 // app.post('/dashboardnewsposts/delete', urlencodedParser, newspost_controller.newspost_delete);
 
+app.get('/guide', function(req, res) {
+    res.render('guide');
+});
+app.get('/guides/:guideID/:guideName', urlencodedParser, guide_controller.guide_details);
+app.post('/guides/create', urlencodedParser, guide_controller.guide_create);
+app.post('/guides/update', urlencodedParser, guide_controller.guide_update);
+app.post('/guides/delete', urlencodedParser, guide_controller.guide_delete);
+
+app.get('/dashboard/items/consumables/:consumableID/details', urlencodedParser, consumable_controller.consumable_details);
+app.post('/dashboard/items/consumables/create', urlencodedParser, consumable_controller.consumable_create);
+app.post('/dashboard/items/consumables/update', urlencodedParser, consumable_controller.consumable_update);
+app.post('/dashboard/items/consumables/delete', urlencodedParser, consumable_controller.consumable_delete);
 
 
 //
