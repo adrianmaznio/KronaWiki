@@ -16,8 +16,8 @@ let GuideSchema = new Schema({
         default: Date.now,
         required: false
     },
-    body: {
-        type: String,
+    sections: {
+        type: [],
         required: true
     },
 });

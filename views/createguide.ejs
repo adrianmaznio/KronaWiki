@@ -1,68 +1,12 @@
 <h5 class="card-title">Create Guide:</h5>
 <form action="/dashboard/items/weapons/create" method="POST">
 	<div class="form-group">
-		<label for="class">Weapon Class</label>
-		<select class="form-control" name="class" id="class">
-			<option value="Knight">Knight</option>
-			<option value="Blade">Blade</option>
-			<option value="Billposter">Billposter</option>
-			<option value="Ringmaster">Ringmaster</option>
-			<option value="Ranger">Ranger</option>
-			<option value="Jester">Jester</option>
-			<option value="Elementer">Elementor</option>
-			<option value="Psykeeper">Psykeeper</option>
-			<option value="Raider">Raider</option>
-			<option value="Legionair">Legionair</option>
-		</select>
+		<label for="class">Guide Title</label>
+		<input type="text" class="form-control" name="title">
 	</div>
 	<div class="form-group">
-		<label for="name">Weapon Name</label>
-		<input type="text" class="form-control" name="name">
-	</div>
-	<div class="form-group">
-		<label for="class">Weapon Rarity</label>
-		<select class="form-control" name="rarity" id="rarity">
-			<option value="General">General</option>
-			<option value="Ultimate">Ultimate</option>
-			<option value="Everpower">Everpower</option>
-		</select>
-	</div>
-	<div class="form-group">
-		<label for="type">Weapon Type</label>
-		<select class="form-control" name="type" id="type">
-			<option value="One-Handed Axe">One-Handed Axe</option>
-			<option value="Two-Handed Axe">Two-Handed Axe</option>
-			<option value="One-Handed Sword">One-Handed Sword</option>
-			<option value="Two-Handed Sword">Two-Handed Sword</option>
-			<option value="Knuckle">Knuckle</option>
-			<option value="Stick">Stick</option>
-			<option value="Bow">Bow</option>
-			<option value="Yo-Yo">Yo-Yo</option>
-			<option value="Staff">Staff</option>
-			<option value="Wand">Wand</option>
-			<option value="Gun">Gun</option>
-			<option value="Cannon">Cannon</option>
-		</select>
-	</div>
-	<div class="form-group">
-		<label for="level">Weapon Level</label>
-		<input type="text" class="form-control" name="level">
-	</div>
-	<div class="form-group">
-		<label for="attackMin">Weapon Min. Attack</label>
-		<input type="text" class="form-control" name="attackMin">
-	</div>
-	<div class="form-group">
-		<label for="attackMax">Weapon Max. Attack</label>
-		<input type="text" class="form-control" name="attackMax">
-	</div>
-	<div class="form-group">
-		<label for="bonus">Weapon Bonus</label>
-		<input type="text" class="form-control" name="bonus">
-	</div>
-	<div class="form-group">
-		<label for="bonus">Weapon Location</label>
-		<input type="text" class="form-control" name="location">
+		<label for="name">Guide Author</label>
+		<input type="text" class="form-control" name="author">
 	</div>
 	<button type="submit" class="btn btn-primary">Create</button>
 </form>

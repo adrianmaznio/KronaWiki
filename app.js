@@ -159,9 +159,18 @@ app.get('/dashboard/items', function(req, res) {
 // app.post('/dashboardnewsposts/update', urlencodedParser, newspost_controller.newspost_update);
 // app.post('/dashboardnewsposts/delete', urlencodedParser, newspost_controller.newspost_delete);
 
+//Guides
 app.get('/guide', function(req, res) {
     res.render('guide');
 });
+app.get('/guide/create', function(req, res) {
+    res.render('createguide');
+});
+
+app.get('/guide/highly-detailed-fully-graphical-guide', function(req, res) {
+    res.render('highly-detailed-fully-graphical-guide');
+});
+
 app.get('/guides/:guideID/:guideName', urlencodedParser, guide_controller.guide_details);
 app.post('/guides/create', urlencodedParser, guide_controller.guide_create);
 app.post('/guides/update', urlencodedParser, guide_controller.guide_update);
