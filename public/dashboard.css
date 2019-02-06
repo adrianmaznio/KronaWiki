@@ -140,8 +140,22 @@ body {
  */
 .home-media-item{
 	border: 1px solid white;
+	border-radius: 3px;
 }
 
 .home-media-item:hover{
 	border: 1px solid grey;
+	border-radius: 3px;
+}
+/*
+ * Guides
+ */
+.guide-tool-tip-link{
+	color: blue;
+	cursor: pointer;
+}
+.guide-tool-tip-link:hover{
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
 }
