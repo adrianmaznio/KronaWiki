@@ -150,6 +150,11 @@ body {
 /*
  * Guides
  */
+ .guide-section ul{
+	list-style-type: none;
+	margin: 0;
+  	padding: 0;
+ }
 .guide-tool-tip-link{
 	color: blue;
 	cursor: pointer;
