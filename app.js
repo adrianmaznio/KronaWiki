@@ -167,6 +167,22 @@ app.get('/guide/leveling', function(req, res) {
     res.render('levelingguide');
 });
 
+app.get('/guide/classes', function(req, res) {
+    res.render('classesguide');
+});
+
+app.get('/guide/everpower', function(req, res) {
+    res.render('everpowerguide');
+});
+
+app.get('/guide/crafting', function(req, res) {
+    res.render('craftingguide');
+});
+
+app.get('/guide/spirits', function(req, res) {
+    res.render('spiritsguide');
+});
+
 app.get('/guide/highly-detailed-fully-graphical-guide', function(req, res) {
     res.render('highly-detailed-fully-graphical-guide');
 });
@@ -175,7 +191,7 @@ app.get('/guide/highly-detailed-fully-graphical-guide', function(req, res) {
 // app.post('/guides/create', urlencodedParser, guide_controller.guide_create);
 // app.post('/guides/update', urlencodedParser, guide_controller.guide_update);
 // app.post('/guides/delete', urlencodedParser, guide_controller.guide_delete);
-
+//
 app.get('/dashboard/items/consumables/:consumableID/details', urlencodedParser, consumable_controller.consumable_details);
 app.post('/dashboard/items/consumables/create', urlencodedParser, consumable_controller.consumable_create);
 app.post('/dashboard/items/consumables/update', urlencodedParser, consumable_controller.consumable_update);

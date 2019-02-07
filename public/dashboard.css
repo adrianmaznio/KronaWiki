@@ -138,14 +138,14 @@ body {
 /*
  * Home Page Media
  */
-.home-media-item{
-	border: 1px solid white;
-	border-radius: 3px;
+.home-guides li{
+	float:left;
+	width: 400px;
 }
 
-.home-media-item:hover{
-	border: 1px solid grey;
-	border-radius: 3px;
+.home-news li{
+	float:left;
+	width: 400px;
 }
 /*
  * Guides
