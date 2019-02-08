@@ -164,3 +164,17 @@ body {
 	text-decoration: underline;
 	cursor: pointer;
 }
+
+/* Class Guides */
+
+.class-skills li{
+	float:left;
+	width: 250px;
+  height: 250px;
+}
+
+.gear-progession li{
+	float:left;
+	width: 250px;
+  height: 400px;
+}
