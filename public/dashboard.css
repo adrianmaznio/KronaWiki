@@ -171,10 +171,12 @@ body {
 	float:left;
 	width: 250px;
   height: 250px;
+  text-align: center;
 }
 
 .gear-progession li{
 	float:left;
 	width: 250px;
   height: 400px;
+  text-align: center;
 }
