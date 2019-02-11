@@ -170,7 +170,14 @@ body {
 .class-skills li{
 	float:left;
 	width: 250px;
-  height: 250px;
+  height: 200px;
+  text-align: center;
+}
+
+.krona-skills li{
+	float:left;
+	width: 250px;
+  height: 350px;
   text-align: center;
 }
 
