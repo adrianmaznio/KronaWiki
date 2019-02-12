@@ -167,6 +167,27 @@ body {
 
 /* Class Guides */
 
+.merc-skills li{
+	float:left;
+	width: 250px;
+  height: 200px;
+  text-align: center;
+}
+
+.krona-merc-skills li{
+	float:left;
+	width: 250px;
+  height: 350px;
+  text-align: center;
+}
+
+.merc-progession li{
+	float:left;
+	width: 250px;
+  height: 500px;
+  text-align: center;
+}
+
 .class-skills li{
 	float:left;
 	width: 250px;
@@ -184,7 +205,7 @@ body {
 .gear-progession li{
 	float:left;
 	width: 250px;
-  height: 500px;
+  height: 350px;
   text-align: center;
 }
 
