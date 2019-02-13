@@ -43,6 +43,8 @@ body {
 .sidebar .nav-link {
   font-weight: 500;
   color: #d5c2ab;
+  transform: translateX(1);
+  transition: transform 0.5s ease;
 }
 
 .sidebar .nav-link .feather {
@@ -57,6 +59,7 @@ body {
 
 .sidebar .nav-link:hover {
   color: white;
+  transform: translateX(2em);
   /* color: #007bff; */
 }
 
@@ -74,10 +77,13 @@ body {
 }
 
 /* Navbar Partial */
+.partial {
+  background-color: #282420;
+}
 
 .partial .nav-link {
   font-weight: 500;
-  color: #333;
+  color: #d5c2ab;
 }
 
 .partial .nav-link .feather {
@@ -90,7 +96,7 @@ body {
 }
 
 .partial .nav-link:hover {
-  color: #007bff;
+  color: white;
 }
 
 .partial .nav-link:hover .feather,
