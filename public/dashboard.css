@@ -24,6 +24,8 @@ body {
 
 .sidebar-sticky {
   position: relative;
+  background-color: #282420;
+  color: white;
   top: 0;
   height: calc(100vh - 48px);
   padding-top: .5rem;
@@ -40,7 +42,7 @@ body {
 
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color: #d5c2ab;
 }
 
 .sidebar .nav-link .feather {
@@ -49,11 +51,13 @@ body {
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: white;
+  /* color: #007bff; */
 }
 
 .sidebar .nav-link:hover {
-  color: #007bff;
+  color: white;
+  /* color: #007bff; */
 }
 
 .sidebar .nav-link:hover .feather,
@@ -63,6 +67,9 @@ body {
 
 .sidebar-heading {
   font-size: .75rem;
+  /*  */
+  color: #d5c2ab;
+  /*  */
   text-transform: uppercase;
 }
 
@@ -108,12 +115,17 @@ body {
 /*
  * Navbar
  */
-
+.navbar {
+  background-color: #282420;
+  /* background-color: #332D28; */
+}
 .navbar-brand {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, .25);
+  background-color: #110E0B;
+  /* background-color: #282420; */
+  /* background-color: rgba(0, 0, 0, .25); */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
 }
 
