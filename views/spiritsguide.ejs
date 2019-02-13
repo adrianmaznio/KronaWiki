@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Adrian Maznio">
+	<title>Krona · Wiki</title>
+
+	<!-- Bootstrap core CSS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+	<script src="../../../../dashboard.js"></script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+	<!-- Custom styles for this template -->
+	<link href="../../../../dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+	<% include navbar_partial %>
+
+	<div class="container-fluid">
+		<div class="row">
+
+			<% include sidebar_partial %>
+
+			<!-- Start of main section -->
+			<main role="main" class="col-md-9 ml-sm-auto col-md-10 px-4">
+
+				<div class="row pt-3 pb-2 mb-3">
+
+					<div class="mx-auto" style="width: 1200px;">
+						<div class="container-fluid">
+							<img style="width:200px; display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/RqZqLMZ.png">
+							<h1 class="h2 text-center">Spirits Guide
+							</h1>
+							<br>
+							<h6 class="mt-0 mb-1 text-center">
+								<small class="text-muted">Author: Adrian
+								</small></h6>
+							<h6 class="mt-0 mb-1 text-center">
+								<small class="text-muted">Last updated: 2/13/2019
+								</small></h6>
+							<br>
+							<div class="container-fluid">
+								<div class="card-body mx-auto">
+									<ul class="list-unstyled">
+
+										<li class="media my-4">
+											<img class="d-none d-sm-block mr-3" src="/images/spirits/renders/Serena-New-Shadow.png" style="height: 500px;">
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">What are Spirits?</h5>
+												<p>
+													Spirits are familiars that follow you around, similar to eFlyFF raised pets.
+													They don't engage in combat or pick up any loot, but they do boost your stats and look pretty cool while doing so!
+													<br><br>
+													Spirits are designed to offer a wide variety of different stat and bonus combinations, allowing you to pick a Spirit that is more specifically tailored to both your class and your buildpath instead of just one single flat stat.
+												</p>
+											</div>
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">How do they work?</h5>
+												<p>
+													Spirits level up the same way you do, by fighting monsters all around Krona and gaining EXP!
+													<br><br>
+													Your spirit will leevl up by your side while you level, farm, and complete your daily dungeon runs.
+													To receive an extra boost, you can purchase a Spirit Potion from the Cash Shop to double your Spirit's EXP gain!
+													<br><br>
+													Each time you Spirit gains a level, the bonus stats it offers will increase by a random amount within a set range.
+													<br><br>
+													If you are unhappy with the amount of stats gained by your Spirit as it levels, you will have the option to reroll the stats gained for any level.
+												</p>
+											</div>
+											<img class="d-none d-sm-block mr-3" src="/images/spirits/renders/Sabwal-New-Reverse-Shadow.png" style="height: 500px;">
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+											<img class="d-none d-sm-block mr-3" src="/images/spirits/hungry.png" style="height: 500px;">
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">What do I feed it?</h5>
+												<p>
+													Just like raised pets, Spirits need to be fed regularly.
+													<br><br>
+													Your Spirit's HP bar will gradually deplete the longer it goes without food.
+													To combat this, you will need to purchase some Spirit Feed.
+													<br><br>
+													Feed for Rare Spirits is available from the Spirit Collector, while feed for Epic and Legendary Spirits can be foun at the Mythical Fae Merchant in Sengius Forest and Whimisical Forest in exchange for Mythical Fae Coins.
+													<br><br>
+													To save yourself the hassle of watching your Spirit's HP bar, you can purchase a Spirit Sake from the Cash Shop and your Spirit won't lose any health for a week!
+												</p>
+											</div>
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">What if it dies?</h5>
+												<p>
+													While we don't advocate killing your Spirit here at Krona, if it does happen to die, it's really not too much of a worry!
+													<br><br>
+													Your Spirit can be revived with just a bit of Penya or a few Mythical Fae Coins depending on the rarity.
+													<br><br>
+													If your Spirit is Rare, head over to the Spirit Collector to grab yourself a Spirit Revival Fruit.
+													If your Spirit is Epic or Legendary, head over to the Mythical Fae merchant in Sengius/Whimisical Forest!
+													<br><br>
+													Unlike raised pets, Spirits do not die when you do! So feel free to invite your Spirit along to any dangerous situation!
+												</p>
+											</div>
+											<img class="d-none d-sm-block mr-3" src="/images/spirits/RIP.png" style="height: 500px;">
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+											<!-- <img class="d-none d-sm-block mr-3" src="/images/everpower/augustus.png" style="height: 500px;"> -->
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">Stat progression Per Level</h5>
+												<table class="table">
+													<thead class="thead-dark">
+														<tr>
+															<th scope="col">Stat</th>
+															<th scope="col">Rare</th>
+															<th scope="col">Epic</th>
+															<th scope="col">Legendary</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>STR/STA/DEX/INT</td>
+															<td>1</td>
+															<td>1 ~ 3</td>
+															<td>1 ~ 3</td>
+														</tr>
+														<tr>
+															<td>Phys. Attack/Magic Attack</td>
+															<td>N/A</td>
+															<td>20 ~ 60</td>
+															<td>20 ~ 60</td>
+														</tr>
+														<tr>
+															<td>Healing/Critical Damage</td>
+															<td>N/A</td>
+															<td>1% ~ 3%</td>
+															<td>1% ~ 3%</td>
+														</tr>
+														<tr>
+															<td>HP/map</td>
+															<td>N/A</td>
+															<td>40 ~ 100</td>
+															<td>40 ~ 100</td>
+														</tr>
+														<tr>
+															<td>DEF</td>
+															<td>N/A</td>
+															<td>50 ~ 150</td>
+															<td>50 ~ 150</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">What is stat progression?</h5>
+												<p>
+													Every time your Spirit leels up, it will gain a random number of stats within a set range for its rarity.
+													<br><br>
+													Let's look at an example: <img src="/images/spirits/renders/Uranus-New-Tiny.png">
+													<br><br>
+													This Uranus is an Epic tier Spirit. He offers STA and DEF. He's Level 1, so right now he's giving us 20 STA and 1000 DEF.
+													<br><br>
+													The range for STA progression on an Epic Spirit is 1 ~ 3 per level, and the range for DEF is 50 ~ 150 per level.
+													When he levels up, he gains stats between those ranges. So, a Level 2 Uranus will offer at minimum 21 STA and 1050 DEF and at maximum 23 STA and 1150 DEF.
+													<br><br>
+
+												</p>
+											</div>
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">How do I reroll stats?</h5>
+												<p>
+													If you're unhappy with the increase in stats for any level, you may purchase an item called Spiritual Exchange from the Mythical Fae Coin merchant in Sengius/Whimiscal Forest.
+													<br><br>
+													This item costs 100 Mythical Fae Coins and will allow you to reroll the stats for <strong>ANY</strong> level. Your Spirit must be atlest Level 2 to make use of this item.
+													<br><br>
+													Just visit any Spirit Collector and use the Spiritual Exchange window.
+													Just drag in your Spirit and Spiritual Exchange and select the line to reroll!
+													<br><br>
+													It make take you multiple tries to get the perfect stat increase.
+												</p>
+											</div>
+											<img class="d-none d-sm-block mr-3" src="/images/spirits/spiritual-exchange.png" style="height: 500px;">
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+											<img class="d-none d-sm-block mr-3" src="/images/spirits/spiritshop.png" style="height: 500px;">
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">So how do I get one?</h5>
+												<p>
+													Rare tier Spirits are readily available from the Spirit Collector NPC for the low price of just 1 Perin.
+													<br><br>
+													Epic tier Spirits can be purchsed at the Mythical Fae Coin Merchant in Senguis/Whimiscal Forest for a reasonable sum of 6,000 Mythical Fae Coins.
+													<br><br>
+													Legendary tier Spirits can be obtained in two ways:
+													<br>
+													From Cash Shop Loot Boxes (guaranteed to get one after opening <strong>40</strong> boxes)
+													<br>or<br>
+													From the Mythical Fae Coin Merchant in Sengius/Whimiscal Forest for 100,000 Mythical Fae Coins.
+												</p>
+											</div>
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+											<div class="media-body mr-3 spirit-items">
+												<h5 class="mt-0 mb-1">Spirit Related Items</h5>
+												<ul>
+													<li class="card mx-2 my-2">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetFeedRare.png" style="width:32px;">  Spirit Feed (Rare)</h6>
+															<p class="card-text">Spirit Collecter</p>
+															<p class="card-text">Feed for Rare tier Spirits.</p>
+														</div>
+													</li>
+
+													<li class="card mx-2 my-2">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetFeedEpic.png" style="width:32px;">  Spirit Feed (Epic)</h6>
+															<p class="card-text">Spirit Collecter</p>
+															<p class="card-text">Feed for Epic tier Spirits.</p>
+														</div>
+													</li>
+
+													<li class="card mx-2 my-2">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetFeedLegendary.png" style="width:32px;">  Spirit Feed (Legendary)</h6>
+															<p class="card-text">Spirit Collecter</p>
+															<p class="card-text">Feed for Epic tier Spirits.</p>
+														</div>
+													</li>
+
+													<li class="card mx-2 my-2">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetSakeDrink.png" style="width:32px;">  Spirit Sake</h6>
+															<p class="card-text">Cash Shop</p>
+															<p class="card-text">Keeps Spirit from losing HP for 7 days.</p>
+														</div>
+													</li>
+
+													<li class="card mx-2 my-2">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetRevivalRare.png" style="width:32px;">  Spirit Revival Fruit (Rare)</h6>
+															<p class="card-text">Spirit Collector</p>
+															<p class="card-text">Revives dead Rare tier Spirits.</p>
+														</div>
+													</li>
+
+													<li class="card mx-2 my-2">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetRevivalEpic.png" style="width:32px;">  Spirit Revival Fruit (Epic)</h6>
+															<p class="card-text">Mythical Fae Coin Merchant</p>
+															<p class="card-text">Revives dead Rare Epic Spirits.</p>
+														</div>
+													</li>
+
+													<li class="card mx-2 my-2" style="height: 200px;">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetRevivalLegendary.png" style="width:32px;">  Spirit Revival Fruit (Legendary)</h6>
+															<p class="card-text">Mythical Fae Coin Merchant</p>
+															<p class="card-text">Revives dead Legendary tier Spirits.</p>
+														</div>
+													</li>
+
+													<li class="card mx-2 my-2">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetRevivalUncommon.png" style="width:32px;">  Spiritual Exchange</h6>
+															<p class="card-text">Mythical Fae Coin Merchant</p>
+															<p class="card-text">Rerolls the stats of Spirits.</p>
+														</div>
+													</li>
+
+													<li class="card mx-2 my-2">
+														<div class="card-body">
+															<h6 class="card-title"><img class="card-img-top" src="/images/Icons/Itm_PetPotion.png" style="width:32px;">  Spirit Potion</h6>
+															<p class="card-text">Cash Shop</p>
+															<p class="card-text">Doubles the EXP gain of Spirits.</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+											</li><!-- End Section-->
+
+										<li class="media my-4">
+											<div class="media-body mr-3 rare-spirit-card">
+												<h5 class="mt-0 mb-1">Rare Spirits</h5>
+												<ul>
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Kobrick-New-Small.png">
+											        <h6 class="card-title">Kobrick</h6>
+											        <p class="card-text">Min Stats: STR +50</p>
+															<p class="card-text">Min Stats: STR +75</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Pumpkin-Man-New-Small.png">
+											        <h6 class="card-title">Pumpkin Man</h6>
+											        <p class="card-text">Min Stats: STA +50</p>
+															<p class="card-text">Min Stats: STA +75</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Paruolo-New-Small.png">
+											        <h6 class="card-title">Paruolo</h6>
+											        <p class="card-text">Min Stats: DEX +50</p>
+															<p class="card-text">Min Stats: DEX +75</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Focalor-New-Small.png">
+											        <h6 class="card-title">Focalor</h6>
+											        <p class="card-text">Min Stats: INT +50</p>
+															<p class="card-text">Min Stats: INT +75</p>
+											      </div>
+											    </li>
+												</ul>
+											</div>
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+											<div class="media-body mr-3 epic-spirit-card">
+												<h5 class="mt-0 mb-1">Epic Spirits</h5>
+												<ul>
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Specter-New-Small.png">
+											        <h6 class="card-title">Specter</h6>
+											        <p class="card-text">Min Stats: STR +20; Phys. Attack +300</p>
+															<p class="card-text">Max Stats: STR +92; Phys. Attack +1740</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Nyquist-New-Small.png">
+											        <h6 class="card-title">Nyquist</h6>
+											        <p class="card-text">Min Stats: Critical Damage +30%; Magic Attack +200</p>
+															<p class="card-text">Max Stats: Critical Damage +102%; Magic Attack +1640</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Paimon-New-Small.png">
+											        <h6 class="card-title">Paimon</h6>
+											        <p class="card-text">Min Stats: DEX +20; Magic Attack +500</p>
+															<p class="card-text">Max Stats: DEX +92; Magic Attack +1940</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Uranus-New-Small.png">
+											        <h6 class="card-title">Uranus</h6>
+											        <p class="card-text">Min Stats: STA +20; Defense +1000</p>
+															<p class="card-text">Max Stats: STA +92; Defense +4600</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Maleviel-New-Small.png">
+											        <h6 class="card-title">Maleviel</h6>
+											        <p class="card-text">Min Stats: STA +20; Max. HP +2000</p>
+															<p class="card-text">Max Stats: STA +92; Max. HP +4440</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Muteris-New-Small.png">
+											        <h6 class="card-title">Muteris</h6>
+											        <p class="card-text">Min Stats: Magic Attack +200; Healing +10%</p>
+															<p class="card-text">Max Stats: Magic Attack +1640; Healing +82%</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Seamus-New-Small.png">
+											        <h6 class="card-title">Seamus</h6>
+											        <p class="card-text">Min Stats: DEX +20; Phys. Attack +300</p>
+															<p class="card-text">Max Stats: DEX +92; Phys. Attack +1740</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Furfur-New-Small.png">
+											        <h6 class="card-title">Furfur</h6>
+											        <p class="card-text">Min Stats: DEX +20; Critical Damage +20%</p>
+															<p class="card-text">Max Stats: DEX +92; Critical Damage +92%</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Valkyrie-New-Small.png">
+											        <h6 class="card-title">Valkyrie</h6>
+											        <p class="card-text">Min Stats: INT +20; Magic Attack +500</p>
+															<p class="card-text">Max Stats: INT +92; Magic Attack +1940</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Jeryn-New-Small.png">
+											        <h6 class="card-title">Jeryn</h6>
+											        <p class="card-text">Min Stats: Phys. Attack +500; Critical Damage +10%</p>
+															<p class="card-text">Max Stats: Phys. Attack +1940; Critical Damage +82%</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Grimm-New-Small.png">
+											        <h6 class="card-title">Grimm</h6>
+											        <p class="card-text">Min Stats: STR +20; Critical Damage +10%</p>
+															<p class="card-text">Max Stats: STR +92; Critical Damage +82%</p>
+											      </div>
+											    </li>
+												</ul>
+											</div>
+										</li><!-- End Section-->
+
+										<li class="media my-4">
+											<div class="media-body mr-3 leg-spirit-card">
+												<h5 class="mt-0 mb-1">Legendary Spirits</h5>
+												<ul>
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Ugo-New-Small.png">
+											        <h6 class="card-title">Ugo</h6>
+											        <p class="card-text">Min Stats: STR +80; Critical Damage +50%</p>
+															<p class="card-text">Max Stats: STR +152; Critical Damage +122%</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Baal-New-Small.png">
+											        <h6 class="card-title">Baal</h6>
+											        <p class="card-text">Min Stats: DEX +80; Magic Attack +1750</p>
+															<p class="card-text">Max Stats: DEX +152; Magic Attack +3190</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Tabbi-New-Small.png">
+											        <h6 class="card-title">Tabbi</h6>
+											        <p class="card-text">Min Stats: Phys. Attack +1750; Critical Damage +50%</p>
+															<p class="card-text">Max Stats: Phys. Attack +3190; Critical Damage +122%</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Sabwal-New-Small.png">
+											        <h6 class="card-title">Sabwal</h6>
+											        <p class="card-text">Min Stats: INT +80; Magic Attack +1750</p>
+															<p class="card-text">Max Stats: INT +152; Magic Attack +3190</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Zagan-New-Small.png">
+											        <h6 class="card-title">Zagan</h6>
+											        <p class="card-text">Min Stats: STR +80; Phys. Attack +1550</p>
+															<p class="card-text">Max Stats: STR +152; Phys. Attack +2990</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Belial-New-Small.png">
+											        <h6 class="card-title">Belial</h6>
+											        <p class="card-text">Min Stats: STA +80; Defense +4000</p>
+															<p class="card-text">Max Stats: STA +152; Defense +7600</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Serena-New-Small.png">
+											        <h6 class="card-title">Serena</h6>
+											        <p class="card-text">Min Stats: Critical Damage +30%; Magic Attack +1450</p>
+															<p class="card-text">Max Stats: Critical Damage +102%; Magic Attack +2890</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Lapuree-New-Small.png">
+											        <h6 class="card-title">Lapuree</h6>
+											        <p class="card-text">Min Stats: DEX +80; Critical Damage +60%</p>
+															<p class="card-text">Max Stats: DEX +152; Critical Damage +132%</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Wiratha-New-Small.png">
+											        <h6 class="card-title">Wiratha</h6>
+											        <p class="card-text">Min Stats: STR +30; Max. MP +100</p>
+															<p class="card-text">Max Stats: STR +102; Max. MP +2500</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Zepar-New-Small.png">
+											        <h6 class="card-title">Zepar</h6>
+											        <p class="card-text">Min Stats: STA +70; Max. HP +6000</p>
+															<p class="card-text">Max Stats: STA +143; Max. HP +8400</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Merrilee-New-Small.png">
+											        <h6 class="card-title">Merrilee</h6>
+											        <p class="card-text">Min Stats: Magic Attack +1450; Healing +50%</p>
+															<p class="card-text">Max Stats: Magic Attack +2890; Healing +122%</p>
+											      </div>
+											    </li>
+
+													<li class="card mx-2 my-2">
+											      <div class="card-body">
+															<img class="card-img-top" src="/images/spirits/renders/Serif-New-Small.png">
+											        <h6 class="card-title">Serif</h6>
+											        <p class="card-text">Min Stats: DEX +80; Phys. Attack +1550</p>
+															<p class="card-text">Max Stats: DEX +152; Phys. Attack +2990</p>
+											      </div>
+											    </li>
+												</ul>
+											</div>
+										</li><!-- End Section-->
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div><!-- End Row -->
+		</main><!-- End of main section -->
+
+
+
+
+
+	</div> <!-- End of Row -->
+	</div> <!-- End of Container -->
+
+
+	<script>
+		feather.replace();
+		$("[data-toggle=popover]").each(function(i, obj) {
+
+			$(this).popover({
+				html: true,
+				content: function() {
+					var id = $(this).attr('id')
+					return $('#popover-content-' + id).html();
+				}
+			});
+
+		});
+	</script>
+
+</body>
+
+</html>

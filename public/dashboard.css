@@ -215,3 +215,31 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+.spirit-items li{
+  width: 250px;
+  height: 150px;
+  float: left;
+  text-align: center;
+}
+
+.rare-spirit-card li{
+  width: 200px;
+  height: 300px;
+  float: left;
+  text-align: center;
+}
+
+.epic-spirit-card li{
+  width: 200px;
+  height: 300px;
+  float: left;
+  text-align: center;
+}
+
+.leg-spirit-card li{
+  width: 250px;
+  height: 400px;
+  float: left;
+  text-align: center;
+}
