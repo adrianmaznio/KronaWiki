@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Adrian Maznio">
+	<title>Krona · Wiki</title>
+
+	<!-- Bootstrap core CSS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+	<script src="../../../../dashboard.js"></script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+	<!-- Custom styles for this template -->
+	<link href="../../../../dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+	<% include navbar_partial %>
+
+	<div class="container-fluid">
+		<div class="row">
+
+			<% include sidebar_partial %>
+
+			<!-- Start of main section -->
+			<main role="main" class="col-md-9 ml-sm-auto col-md-10 px-4">
+
+				<div class="row pt-3 pb-2 mb-3">
+
+					<div class="mx-auto" style="width: 1200px;">
+						<div class="container-fluid">
+							<img style="width:200px; display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/RqZqLMZ.png">
+							<h1 class="h2 text-center">Crafting Guide
+							</h1>
+							<br>
+							<h6 class="mt-0 mb-1 text-center">
+								<small class="text-muted">Author: Adrian
+								</small></h6>
+							<h6 class="mt-0 mb-1 text-center">
+								<small class="text-muted">Last updated: 2/13/2019
+								</small></h6>
+							<br>
+							<div class="container-fluid">
+								<div class="card-body mx-auto">
+									<ul class="list-unstyled">
+										<li class="media my-4">
+											<img class="d-none d-sm-block mr-3 rounded" src="/images/crafting/Ugoki.png" style="height: 300px;">
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">Introduction</h5>
+												<p>
+													Okay, so you've cleared some dungeons and looted some crafting materials. "Wait.. Did I just get crafting materials", you ask yourself.
+													Yes! Yes you did! Onima and Faymarsh Peak are dungeons that drop crafting materials!
+													<br>
+													You can get crafting materials from other places too.
+													<br><br>
+													So now that you have these materials, what's next? Head on over to [Crafting] Ugoki in Central Flarine and I'll show you!
+													Well, I'm here to show you how easy Crafting really is!
+												</p>
+											</div>
+										</li><!-- End Section-->
+
+										<li class="media my-4 guide-section">
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">What can be crafted</h5>
+												<p>
+													Level 175 Legendary Equipment, Onima Accessories, Insignias, Brooches, Relics, and Potions can all be crafted at [Crafting] Ugoku.
+												</p>
+											</div>
+											<img class="d-none d-sm-block mr-3" src="/images/crafting/Crafting-Menu.png" style="height: 350px;">
+										</li><!-- End Section-->
+
+										<li class="media my-4 guide-section">
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">PvE Equipment Materials</h5>
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftClockworksGun.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftQueenCursedCrown.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftZiraderTormentSoul.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftNapoleonCompass.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftChillrendEtherealIce.png">
+
+												<h5 class="mt-0 mb-1">PvP Equipment Materials</h5>
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftClockworkSchematics.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftConquerorBlood.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftArnoldSecret.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftLostRelic.png"><img class="mr-3" src="/images/Icons/Itm_PVPSupplyCrate.png">
+
+												<h5 class="mt-0 mb-1">Tier 1 Accessory Materials</h5>
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftMoldOfTheBand.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftMoldOfTheNecklace.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftMoldOfTheEarring.png">
+
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftPurpleOre.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftBlueOre.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftBlackOre.png">
+
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaAura.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaShard.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaDiamond.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaCrystal.png">
+
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaFungus.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaStone.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftDefense.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaSwiftDust.png">
+
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaBlackEnergy.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaBlueEnergy.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaRedEnergy.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaWhiteEnergy.png">
+
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaBlueEssence.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaGoldenEssence.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaOrangeEssence.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaPurpleEssence.png">
+
+												<h5 class="mt-0 mb-1">Tier 2 Accessory Materials</h5>
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaBlueAura.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaEnchantedShard.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaBlueDiamond.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaBlueCrystal.png">
+
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftMageUnlock.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftKingdomHiddenRune.png">
+												<h5 class="mt-0 mb-1">Tier 3 Accessory Materials</h5>
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaStrongestAura.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaPerfectShard.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaHardenedDiamond.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftOnimaBrightestCrystal.png">
+
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftSorcererUnlock.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftEvaHeart.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftEvaSoul.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftEvaSinisterRing.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftEvaHarp.png">
+
+												<h5 class="mt-0 mb-1">Tier 1 Insignia Materials</h5>
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftTiallePendant.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftForetremLifeForce.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftMagicalLimestone.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftKronaScale.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftAstralPowder.png">
+
+												<h5 class="mt-0 mb-1">Tier 2 Insignia Materials</h5>
+												<img class="mr-3" src="/images/Icons/Itm_SysCraftTialleEye.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftForetremStem.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftLimestoneCore.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftKronaSkull.png"><img class="mr-3" src="/images/Icons/Itm_SysCraftAstralPowder.png">
+
+												<h5 class="mt-0 mb-1">Brooch and Relic Material</h5>
+												<img class="mr-3" src="/images/Icons/Itm_DimensionalFragment.png">
+
+												<h5 class="mt-0 mb-1">Potion Materials</h5>
+												<img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyBlue.png"><img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyBlueSky.png"><img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyGray.png"><img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyGreen.png"><img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyOrange.png"><img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyPink.png">
+												<img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyRed.png"><img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyViolet.png"><img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyWhite.png"><img class="mr-3" src="/images/Icons/Itm_SysSysScrCottonCandyYellow.png">
+												<br>
+												<img class="mr-3" src="/images/Icons/itm_GenPotCylinderPoison01.png"><img class="mr-3" src="/images/Icons/itm_GenPotCylinderPoison02.png"><img class="mr-3" src="/images/Icons/itm_GenPotCylinderPoison03.png"><img class="mr-3" src="/images/Icons/itm_GenPotCylinderPoison04.png"><img class="mr-3" src="/images/Icons/itm_GenPotCylinderPoison05.png">
+												<img class="mr-3" src="/images/Icons/itm_GenPotSpPoison01.png"><img class="mr-3" src="/images/Icons/itm_GenPotSpPoison03.png"><img class="mr-3" src="/images/Icons/itm_GenPotWingPoison01.png"><img class="mr-3" src="/images/Icons/itm_GenPotWingPoison02.png"><img class="mr-3" src="/images/Icons/itm_GenPotWingPoison03.png">
+
+											</div>
+
+											<div class="media-body mr-3">
+												<h5 class="mt-0 mb-1">Where to obtain materials</h5>
+												<p>
+													The materials for Level 175 [PvE] Legendary Equipment is obtained in various ways.<br>
+													Clockwork's Gun is looted from the Clockworks who shows up at the end of Invasions (if enough Puppets have been killed).
+													Queen's Cursed Crown is obtained from [World Boss Orb Collector] Boris in exchange for 2,500 Orb of the Huntsman.
+													Zirader's Tormented Soul is obtained from the Raid dungeon.
+													Napolean's Faitful Compass is obtained from Pandora's Loot Boxes, which you can loot from Colosseum and Temple of Catan.
+													Chilrend's Ethereal Ice is obtained from Frostwind giants.
+													<br><br>
+													The materials for Level 175 [PvP] Legendary Equipment is obtained in various ways.<br>
+													Clockworkian Schematics drop from Puppets in Invasions.
+													Conqueror's Blood drops from World Bosses.
+													Arnold's Secret is obtained from [Masquerpet Coin Shop] Arnold in Central Flarine.
+													Lost Relic of Time drops from Goldflower Temple and is also obtained from Stay Connected Loot Boxes.
+													PvP Supply Crates drops from World Bosses.
+													<br><br>
+													The materials for Onima Accessories are obtained from the Onima dungeon.<br>
+													Easy Mode is a solo instance that drops materials at a lower quantity and rate than Hard Mode.<br>
+													Mage's and Sorceror's Unlock are obtained from Voters Gambling Loot Boxes. Kingdom's Hidden Rune drop from Puppets in Invasions.
+													<br><br>
+													The materials for Insignias are obtained from the Faymarsh Peak dungeon.<br>
+													Easy Mode is a solo instance that drops materials at a lower quantity and rate than Hard Mode.
+													Both modes drop Tier 1 and Tier 2 Insignia materials.<br>
+													Astral Powder drops from Frostwind giants and obtained from dismantling equipment.
+													<br><br>
+													The material for Brooches and Relics is called Dimensional Fragment and is obtained from Voters Gambling Loot Box.<br>
+													Note: This is for crafting Legendary Brooches and Relics. The Rare and Epic tier Brooches and Relics drop from dungeons.<br>
+													Legendary Brooches and Relics are also obtainable from the Cash Shop.
+													<br><br>
+													There are 4 Potions that you can currently craft: Fury Potion, Power Potion, Blue Candy, and Green Candy.<br>
+													Green and Blue Candy can be crafted using the Cotton Candy you loot from Invasions. Puppets drop the Cotton Candy.<br>
+													The Fury and Power Potions can be crafted using the potions obtained from Cash Shop loot boxes.
+												</p>
+											</div>
+										</li><!-- End Section-->
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div><!-- End Row -->
+		</main><!-- End of main section -->
+
+
+
+
+
+	</div> <!-- End of Row -->
+	</div> <!-- End of Container -->
+
+
+	<script>
+		feather.replace();
+		$("[data-toggle=popover]").each(function(i, obj) {
+
+			$(this).popover({
+				html: true,
+				content: function() {
+					var id = $(this).attr('id')
+					return $('#popover-content-' + id).html();
+				}
+			});
+
+		});
+	</script>
+
+</body>
+
+</html>
