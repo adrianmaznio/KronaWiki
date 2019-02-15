@@ -261,3 +261,11 @@ body {
   float: left;
   text-align: center;
 }
+
+/* Awakes Table */
+.awakes tr{
+  text-align: center;
+}
+.awakes td{
+  text-align: center;
+}

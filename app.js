@@ -183,6 +183,11 @@ app.get('/guide/spirits', function(req, res) {
   res.render('spiritsguide');
 });
 
+//Resources
+app.get('/guide/awakes', function(req, res) {
+  res.render('awakestable');
+});
+
 app.get('/guide/highly-detailed-fully-graphical-guide', function(req, res) {
   res.render('highly-detailed-fully-graphical-guide');
 });
