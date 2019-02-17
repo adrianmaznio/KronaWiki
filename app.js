@@ -163,6 +163,9 @@ app.get('/dashboard/items', function(req, res) {
 app.get('/guide/', function(req, res) {
   res.render('guide');
 });
+app.get('/guide/beginners', function(req, res) {
+  res.render('beginnersguide');
+});
 app.get('/guide/leveling', function(req, res) {
   res.render('levelingguide');
 });
