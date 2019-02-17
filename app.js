@@ -166,6 +166,9 @@ app.get('/guide/', function(req, res) {
 app.get('/guide/beginners', function(req, res) {
   res.render('beginnersguide');
 });
+app.get('/guide/endgame', function(req, res) {
+  res.render('endgameguide');
+});
 app.get('/guide/leveling', function(req, res) {
   res.render('levelingguide');
 });
