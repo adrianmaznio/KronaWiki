@@ -194,8 +194,8 @@ app.get('/guide/awakes', function(req, res) {
   res.render('awakestable');
 });
 
-app.get('/guide/highly-detailed-fully-graphical-guide', function(req, res) {
-  res.render('highly-detailed-fully-graphical-guide');
+app.get('/guide/scaling', function(req, res) {
+  res.render('classstats');
 });
 
 // app.get('/guides/:guideID/:guideName', urlencodedParser, guide_controller.guide_details);
